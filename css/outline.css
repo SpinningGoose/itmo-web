@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+.body {
+    font-family: 'Oswald';
+    background-color: rgb(252, 243, 232);
+    color: #025940;
+}
+.header {
+    background-color: #024059;
+    color: #04BF8A;
+    margin-left: 1%;
+    margin-right: 1%;
+    font-size: 3vh;
+    padding-top: 0.01rem;
+    padding-left: 1rem;
+    border-radius: 10px;
+}
+.header_section{
+    font-size: 4vh;
+}
+.main_section {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 1rem 1rem 3rem;
+}
+.about-us {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-left: -1%;
+    padding-left: 1%;
+    font-size: 4vh;
+    border-radius: 10px;
+}
+.text-block {
+    margin-bottom: 2rem;
+    margin-right: auto;
+    padding: 1rem 1rem 1rem 1rem;
+    background-color: #ebfeff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+.fancy-text {
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+.code-block {
+    padding-left: 2rem;
+    color: black
+}
+.h3 {
+    margin-top: -5px;
+    margin-right: 70%;
+    padding-left: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.h3-workers{
+    margin-right: 50%;
+}
+.code-header{
+    padding-left: -100rem;
+}
+.navigation {
+    text-align: left;
+    padding-bottom: 1rem;
+}
+.vacancies {
+    margin-bottom: 2rem;
+    margin-right: auto;
+    padding: 1rem 1rem 1rem 1rem;
+    background-color: #ebfeff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+.vacancies_header{
+    margin-top: -5px;
+    margin-right: 85%;
+    padding-left: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.footer {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #024059;
+    color: #04BF8A;
+    margin: 0rem -1rem -1rem -1rem;
+    padding: 0rem 1rem 1rem 1rem;
+}
+.contacts_header {
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+.pic {
+    border: 5px solid #024059;
+}
