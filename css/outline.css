@@ -24,15 +24,15 @@
 }
 .about-us {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    margin-left: -1%;
-    padding-left: 1%;
+    margin-left: -10px;
+    padding-left: 10px;
     font-size: 2rem;
     border-radius: 10px;
 }
 .text-block {
-    margin-bottom: 2rem;
+    margin-bottom: 20px;
     margin-right: auto;
-    padding: 1rem 1rem 1rem 1rem;
+    padding: 20px 10px 10px 10px;
     background-color: #ebfeff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
@@ -43,30 +43,30 @@
     letter-spacing: 0.5rem;
 }
 .code-block {
-    padding-left: 2rem;
+    padding-left: 20px;
     color: black
 }
 .h3 {
     margin-top: -5px;
-    margin-right: 70%;
-    padding-left: 1rem;
+    margin-right: 900px;
+    padding-left: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 .h3-workers{
-    margin-right: 50%;
+    margin-right: 500px;
 }
 .code-header{
-    padding-left: -100rem;
+    padding-left: -100px;
 }
 .navigation {
     text-align: left;
-    padding-bottom: 1rem;
+    padding-bottom: 10px;
 }
 .vacancies {
-    margin-bottom: 2rem;
+    margin-bottom: 20px;
     margin-right: auto;
-    padding: 1rem 1rem 1rem 1rem;
+    padding: 10px 10px 10px 10px;
     background-color: #ebfeff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
@@ -74,7 +74,7 @@
 .vacancies_header{
     margin-top: -5px;
     margin-right: 85%;
-    padding-left: 1rem;
+    padding-left: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
@@ -82,15 +82,15 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #024059;
     color: #04BF8A;
-    margin: 0rem -1rem -1rem -1rem;
-    padding: 0rem 1rem 1rem 1rem;
+    margin: 0px -10px -10px -10px;
+    padding: 0px 10px 10px 10px;
 }
 .link {
     color: #ebfeff;
 }
 .contacts_header {
-    padding-top: 1rem;
-    padding-left: 1rem;
+    padding-top: 10px;
+    padding-left: 10px;
 }
 .pic {
     border: 5px solid #024059;
