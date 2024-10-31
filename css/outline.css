@@ -85,10 +85,15 @@
     margin: 0rem -1rem -1rem -1rem;
     padding: 0rem 1rem 1rem 1rem;
 }
+.link {
+    color: #ebfeff;
+}
 .contacts_header {
     padding-top: 1rem;
     padding-left: 1rem;
 }
 .pic {
     border: 5px solid #024059;
+    height: auto;
+    width: 50%;
 }
