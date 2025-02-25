@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title lang="ru">УГЗ</title>
+        <link href="css/outline.css" rel="stylesheet">
+        <meta charset="utf-8">
+
+    </head>
+    <body class="body">
+        <header class="header">
+            <section class="header_section">
+                <h1>УГЗ - лучший в своей отрасли</h1>
+            </section>        
+            <nav class="navigation">
+                <ul class="navbar">
+                    <li><a href="index.html" class="link nav__link">Главная</a></li>
+                    <li><a href="partners.html" class="link nav__link">Наши партнеры</a></li>
+                    <li><a href="contacts.html" class="link nav__link">УГБлог</a></li>
+                    <li><a href="org.html" class="link nav__link">Form</a></li>
+                    <li><a href="clients.html" class="link nav__link">Клиенты о нас</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main_part">
+            <section id="form_section">
+                <h2>Отправьте запрос на пробник</h2>
+                <form>
+                    <label for="name">Имя:</label><br>
+                    <input type="text" id="name" name="name" required class="form__input"><br><br>
+
+                    <label for="email">Почта:</label><br>
+                    <input type="email" id="email" name="email" required class="form__input"><br><br>
+
+                    <label>Вид пробника:</label><br>
+                    <input type="radio" id="all" name="order_type" value="Сделать что-то" required class="form__input">Сделать что-то</label><br>
+                    <input type="radio" id="something" name="order_type" value="Попытаться сделать что-то" required class="form__input">Попытаться сделать что-то</label><br>
+                    <input type="radio" id="nothing" name="order_type" value="Ничего не делать" required class="form__input">Ничего не делать</label><br><br>
+
+                    <label for="comment">Комментарий:</label><br>
+                    <textarea id="comment" name="comment" rows="4" required class="form__input"></textarea><br><br>
+
+                    <button type="submit" class="form__submit">Отправить</button>
+                </form>
+
+                <h2>Ваши запросы</h2>
+                <div id="order-container"></div>
+
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <div class="contacts">
+                <h5 class="contacts_header">Контакты</h5>
+                <ul>
+                    <li> Тел: <a class="link" href="tel:+7(413)882-28-14">+7(413)882-28-14
+                        </a>
+                    </li>
+                    <li> Почта: <a class="link" href="mailto:ugz@zavod.ru">ugz@zavod.ru
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <script src="scripts/main.js"></script>
+        <script src="scripts/org.js"></script>
+    </body>
+</html>

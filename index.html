@@ -12,19 +12,18 @@
                 <h1>УГЗ - лучший в своей отрасли</h1>
             </section>        
             <nav class="navigation">
-                Навигация по страницам
+                <ul class="navbar">
+                    <li><a href="index.html" class="nav__link">Главная</a></li>
+                    <li><a href="partners.html" class="nav__link">Наши партнеры</a></li>
+                    <li><a href="contacts.html" class="nav__link">УГБлог</a></li>
+                    <li><a href="org.html" class="link nav__link">Form</a></li>
+                    <li><a href="clients.html" class="link nav__link">Клиенты о нас</a></li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="main_part">
             <section class="main_section">
-                <h2 class="about-us">О нас</h2>
-                <section class="text-block">
-                    <h3 class="h3">Статья из газеты "Уралец"</h3>
-                    <article class="article">
-                       <h4 class="h4">УГЗ таранит бампером конкурентов</h4>
-                       <p>Утром 7 декабря директор УГЗ на своем УАЗ-2107 протаранил фуру перевозящую материалы для УралМашРосСтройИнвест...</p>
-                    </article>
-                </section>
+                <h2 class="h2">О нас</h2>
                 <section class="text-block">
                     <h3 class="h3">Формула нашего успеха</h3>
                     <ol>
@@ -40,13 +39,13 @@
                 <section class="text-block ascii-block">
                 <h3 class="h3">УГЗ в искусстве</h3>
                     <pre>
-                    ##   ##  ######     ##     ####
-                    ##   ##   ##  ##   ####     ##
-                    ##   ##   ##  ##  ##  ##    ##
-                    ##   ##   #####   ##  ##    ##
-                    ##   ##   ## ##   ######    ##   #
-                    ##   ##   ##  ##  ##  ##    ##  ##
-                     #####   #### ##  ##  ##   #######
+    ##   ##  ######     ##     ####
+    ##   ##   ##  ##   ####     ##
+    ##   ##   ##  ##  ##  ##    ##
+    ##   ##   #####   ##  ##    ##
+    ##   ##   ## ##   ######    ##   #
+    ##   ##   ##  ##  ##  ##    ##  ##
+     #####   #### ##  ##  ##   #######
                    
                    </pre>
                 </section>
@@ -62,15 +61,43 @@ if (partner == UGZ) then {
                         </code></pre>
                     </section>
                 </section>
+                <section class="text-block galery">
+                    <h3 class="h3 h3-workers">Наши высококлассные специалисты</h3>
+                    <section class="images">
+                        <img class="pic" src="resources/ugz-worker.webp">
+                        <img class="pic" src="resources/woman-ugz.webp">
+                        <img class="pic" src="resources/cripple-ugz.jpg" alt="">
+                    </section>
+                </section>
                 <section class="text-block">
-                    <h3 class="h3 fancy-text h3-workers">Наши высококлассные специалисты</h3>
-                    <img class="pic" src="resources/ugz-worker.webp">
-                    <img class="pic" src="resources/woman-ugz.webp">
-                    <img class="pic" src="resources/cripple-ugz.jpg" alt="">
+                    <h3 class="h3">Услуги и расценки</h3>
+                    <section class="table">
+                        <div class="table__title">Наименование</div>
+                        <div class="table__title">Стоимость</div>
+                        <div class="table__title">Время исполнения</div>
+                        <div class="table__name">Сделать что-то</div>
+                        <div class="table__cost">10000</div>
+                        <div class="table__time">5</div>
+                        <div class="table__name">Попытаться сделать что-то</div>
+                        <div class="table__cost">5000</div>
+                        <div class="table__time">3</div>
+                        <div class="table__name">Ничего не делать</div>
+                        <div class="table__cost">1000</div>
+                        <div class="table__time">2</div>
+                    </section>
+
                 </section>
             </section>
             <section>
                 <aside class="aside">
+                    <h2>Новости</h2>
+                    <section class="vacancies">
+                        <h3 class="h3">Статья из газеты "Уралец"</h3>
+                        <article class="article">
+                           <h4 class="h4">УГЗ таранит бампером конкурентов</h4>
+                           <p>Утром 7 декабря директор УГЗ на своем УАЗ-2107 протаранил фуру перевозящую материалы для УралМашРосСтройИнвест...</p>
+                        </article>
+                    </section>
                     <section class="vacancies">
                         <h4 class="vacancies_header">Вакансии</h4>
                         <p>Требуется директор. Квалификация не важна</p>
@@ -92,6 +119,7 @@ if (partner == UGZ) then {
             </div>
         </footer>
 
+        <script src="scripts/main.js"></script>
     </body>
 
 </html>
