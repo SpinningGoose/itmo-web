@@ -9,15 +9,15 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault();
 
         const name = document.getElementById('name').value;
-        if (name.startsWith(" ")) {
-            form.reset();
-            alert('Name must not start with space')
+        if (name.trim() == "") {
+            document.getElementById('name').value = '';
+            alert('Name must not be just spaces')
             throw console.error('Name starts with space');
             
         } 
         const email = document.getElementById('email').value;
         if (email.startsWith(" ")) {
-            form.reset();
+            document.getElementById('email').value = '';
             alert('Email must not start with space')
             throw console.error('Email starts with space');
             
@@ -31,9 +31,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
         const comment = document.getElementById('comment').value;
-        if (comment.startsWith(" ")) {
-            form.reset();
-            alert('Comment must not start with space')
+        if (comment.trim() == "") {
+            document.getElementById('comment').value = '';
+            alert('Comment must not be just spaces')
             throw console.error('Comment starts with space');
             
         } 

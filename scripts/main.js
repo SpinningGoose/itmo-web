@@ -11,10 +11,11 @@
     
 
     const navLinks = document.querySelectorAll('.nav__link');
-    const currentPage = window.location.pathname.split('/').pop();
+    const currentPage = window.location.href;
+    console.log("Current path:", currentPage);
 
     navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPage) {
+        if (currentPage == link.href) {
             link.classList.add('nav__link--active');
         }
     });
