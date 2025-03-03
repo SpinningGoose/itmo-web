@@ -1,14 +1,27 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('form_section');
+    const form = document.getElementById('form-part');
     const orderContainer = document.getElementById('order-container');
 
     loadOrders();
 
     form.addEventListener('submit', function (event) {
-     //   event.preventDefault();
+
+        event.preventDefault();
 
         const name = document.getElementById('name').value;
+        if (name.startsWith(" ")) {
+            form.reset();
+            alert('Name must not start with space')
+            throw console.error('Name starts with space');
+            
+        } 
         const email = document.getElementById('email').value;
+        if (email.startsWith(" ")) {
+            form.reset();
+            alert('Email must not start with space')
+            throw console.error('Email starts with space');
+            
+        } 
         var types = document.getElementsByName('order_type');
         var typeValue;
         for (let index = 0; index < types.length; index++) {
@@ -18,38 +31,33 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
         const comment = document.getElementById('comment').value;
-
-        const result = createOrder(name, email, typeValue, comment);
-        orderContainer.appendChild(result);
+        if (comment.startsWith(" ")) {
+            form.reset();
+            alert('Comment must not start with space')
+            throw console.error('Comment starts with space');
+            
+        } 
 
         saveOrder(name, email, typeValue, comment);
+
+        displayOrder(name, email, typeValue, comment);
 
         form.reset();
     });
 
-    function createOrder(username, email, order_type, comment) {
-        const order = document.createElement('div');
-        order.classList.add('order');
+    function displayOrder(name, email, order_type, comment) {
+        const orderTemplate = document.getElementById('order-template');
+        const orderElement = orderTemplate.content.cloneNode(true);
 
-        const orderHeader = document.createElement('h3');
-        orderHeader.textContent = username;
+        orderElement.querySelector('.order-name').textContent = name;
 
-        const orderEmail = document.createElement('p');
-        orderEmail.textContent = email;
+        orderElement.querySelector('.order-email').textContent = email;
 
-        const orderType = document.createElement('p');
-        orderType.textContent = order_type;
+        orderElement.querySelector('.order-type').textContent = order_type;
 
-        const orderComment = document.createElement('p');
-        orderComment.textContent = comment;
-        
+        orderElement.querySelector('.order-comment').textContent = comment;
 
-        order.appendChild(orderHeader);
-        order.appendChild(orderEmail);
-        order.appendChild(orderType);
-        order.appendChild(orderComment);
-
-        return order;
+        orderContainer.appendChild(orderElement);
     }
 
     function saveOrder(name, email, order_type, comment) {
@@ -62,8 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let orders = JSON.parse(localStorage.getItem('orders')) || [];
 
         orders.forEach(function (order) {
-            const orderElement = createOrder(order.name, order.email, order.order_type, order.comment);
-            orderContainer.appendChild(orderElement);
+            displayOrder(order.name, order.email, order.order_type, order.comment);
         });
-    }
+    } 
 });

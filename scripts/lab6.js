@@ -9,6 +9,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function loadPosts() {
+        const randomNumber = Math.floor(Math.random() * 10) + 1;
+        for (let index = 0; index < randomNumber; index++) {
+            loadPost();
+            
+        }
+    }
+
+    function loadPost() {
         fetch(getPost())
             .then(response => {
                 if (!response.ok) {
@@ -18,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
             })
             .then(data => {
                 preloader.style.display = 'none';
-                displayPosts(data);
+                displayPost(data);
             })
             .catch(error => {
                 preloader.style.display = 'none';
@@ -27,22 +35,18 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     }
 
-    function displayPosts(posts) {
+    function displayPost(posts) {
         posts.forEach(post => {
-            const postElement = document.createElement('article');
-            postElement.classList.add('post');
+            const postTemplate = document.getElementById('post-template');
+            const postElement = postTemplate.content.cloneNode(true);
 
-            const titleElement = document.createElement('h3');
-            titleElement.textContent = post.title;
+            postElement.querySelector('.post-title').textContent = post.title;
 
-            const bodyElement = document.createElement('p');
-            bodyElement.textContent = post.body;
-
-            postElement.appendChild(titleElement);
-            postElement.appendChild(bodyElement);
-
+            postElement.querySelector('.post-text').textContent = post.body;
+        
             blogContainer.appendChild(postElement);
         });
+     
     }
 
     loadPosts();

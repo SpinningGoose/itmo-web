@@ -24,11 +24,19 @@
         <main class="main_part">
             <section class="text-block">
                 <h2 class="h2">УГБлог</h2>
+                <div id="blog-container"></div>
                 <div id="preloader" class="preloader">
                     <img src="resources/node_graph_out_of_date.png" alt="preloader">
                 </div>
-                <div class="text-block" id="blog-container"></div>
+                
                 <div id="error-message" class="error-message" style="display:none;">⚠ Что-то пошло не так!</div>
+
+                <template id="post-template">
+                    <div class="post">
+                        <h3 class="post-title"></h3>
+                        <div class="post-text"></div>
+                    </div>
+                </template>
 
             </section>
 

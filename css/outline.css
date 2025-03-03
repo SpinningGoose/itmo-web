@@ -61,6 +61,7 @@
     align-self: flex-start;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     margin-left: 10px;
+    margin-top: 10px;
     padding-left: 10px;
     font-size: 2rem;
     border-radius: 10px;
@@ -173,8 +174,8 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #024059;
     color: #04BF8A;
-    margin: 0px -10px -10px -10px;
-    padding: 0px 10px 10px 10px;
+    width: 100%;
+  
 }
 
 .link {
@@ -194,6 +195,10 @@
 
 .contacts_header {
     padding-top: 10px;
+ 
+}
+
+.contacts {
     padding-left: 10px;
 }
 
@@ -206,27 +211,30 @@
 .table {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 35px);
-    background: repeating-linear-gradient(#ddd 0 35px, transparent 35px 70px);
+    grid-template-rows: repeat(4, 1fr);
 }
+
+
 
 .table__title {
     font-size: large;
     font-weight: bold;
 }
 
+thead, tbody, tr {
+    display: contents;
+}
+
+
+tbody tr:nth-child(odd) td{
+    background-color: #ddd;
+}
+/*
 table {
     border: 2px solid #025940;
     border-collapse: collapse;
 }
-
-td {
-    border: 2px solid #025940;
-}
-
-th {
-    border: 2px solid #025940;
-}
+*/
 
 #xina {
     width: auto;
@@ -238,6 +246,7 @@ th {
     flex-direction: column;
     width: 100%;
     margin-left: 10px;
+    margin-top: 10px;
 }
 
 #order-container {
@@ -331,3 +340,57 @@ th {
     color: #024059 !important; 
     margin: -7px;
 }
+
+#order-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-element {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: -5px;
+    max-width: 50%;
+}
+
+#form-part {
+    margin-bottom: 10px;
+}
+
+.post {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: -5px;
+    max-width: 50%;
+    margin-left: 10px;
+}
+
+input[type=text], input[type=email], textarea {
+    width: 30%;
+    padding: 6px 10px;
+    margin: 8px;
+    box-sizing: border-box;
+}
+
+input[type=text]:focus, input[type=email]:focus {
+    border: 3px solid #555;
+  }
+
+button {
+    background-color: #024059;
+    border: none;
+    color: #ddd;
+    font-family: 'Oswald', serif;
+    font-size: large;
+    padding: 16px 32px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }

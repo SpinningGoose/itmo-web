@@ -24,7 +24,7 @@
         <main class="main_part">
             <section id="form_section">
                 <h2>Отправьте запрос на пробник</h2>
-                <form>
+                <form id="form-part">
                     <label for="name">Имя:</label><br>
                     <input type="text" id="name" name="name" required class="form__input"><br><br>
 
@@ -43,7 +43,18 @@
                 </form>
 
                 <h2>Ваши запросы</h2>
-                <div id="order-container"></div>
+                <div id="order-container">
+                    
+                    
+                </div>
+                <template id="order-template">
+                    <div class="order-element">
+                        <h3 class="order-name"></h3>
+                        <div class="order-email"></div>
+                        <div class="order-type"></div>
+                        <div class="order-comment"></div>
+                    </div>
+                </template>
 
             </section>
 

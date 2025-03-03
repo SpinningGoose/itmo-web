@@ -19,14 +19,15 @@
         }
     });
 
-    /*
-    var links = document.querySelectorAll('.nav__link')
-    var currPage = window.location.toString()
-    const currPage = window.location.pathname.split('/').pop();
+   /* 
+    var links = document.querySelectorAll('.nav__link');
+    var currPage = window.location.href;
+    var abs = window.location.pathname.split('/').slice(1).toString();
+   // const currPage = window.location.pathname.split('/').pop();
 
     for (var i = 0; i < links.length; i++) {
-        var currLink = links[i]
-        if (currLink.getAttribute('href') == currPage) {
+        var currLink = abs + links[i].getAttribute('href');
+        if (currLink == currPage) {
             currLink.classList.add('nav__link--a');
         }
     };*/
